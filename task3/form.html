@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
+</head>
+<body>
+    <center>
+        <h2>Event Registration Form</h2>
+    </center>
+    <center>
+    <form action="submit.php" method="post">
+        <table cellpadding="10" border="1">
+            <tr>
+                <td><label for="fullname">Full Name:</label></td>
+                <td><input type="text" id="fullname" name="fullname" required></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" id="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td><label for="phone">Phone Number:</label></td>
+                <td>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter Valid Number">
+                </td>
+            </tr>
+            <tr>
+                <td><label for="attendees">Number of Attendees:</label></td>
+                <td>
+                    <input type="number" id="attendees" name="attendees" min="1" max="10" required>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="eventdate">Event Date:</label></td>
+                <td>
+                    <input type="date" id="eventdate" name="eventdate" min="2025-08-09" required>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="eventtime">Event Time:</label></td>
+                <td>
+                    <input type="time" id="eventtime" name="eventtime" required>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="eventtype">Event Type:</label></td>
+                <td>
+                    <select id="eventtype" name="eventtype" required>
+                        <option value="" disabled selected>Select an event type</option>
+                        <option value="conference">Conference</option>
+                        <option value="workshop">Workshop</option>
+                        <option value="webinar">Webinar</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Dietary Restrictions:</td>
+                <td>
+                    <input type="checkbox" id="vegetarian" name="diet[]" value="Vegetarian">
+                    <label for="vegetarian">Vegetarian</label>
+                    <input type="checkbox" id="glutenfree" name="diet[]" value="Gluten-Free">
+                    <label for="glutenfree">Gluten-Free</label>
+                </td>
+            </tr>
+            <tr>
+                <td>T-shirt Size:</td>
+                <td>
+                    <input type="radio" id="sizeS" name="tshirt" value="S" required>
+                    <label for="sizeS">S</label>
+                    <input type="radio" id="sizeM" name="tshirt" value="M">
+                    <label for="sizeM">M</label>
+                    <input type="radio" id="sizeL" name="tshirt" value="L">
+                    <label for="sizeL">L</label>
+                    <input type="radio" id="sizeXL" name="tshirt" value="XL">
+                    <label for="sizeXL">XL</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="comments">Comments/Questions:</label></td>
+                <td>
+                    <textarea id="comments" name="comments" maxlength="250" rows="4" cols="30" placeholder="Max 250 characters"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <button type="submit">Submit</button>
+                </td>
+            </tr>
+        </center>
+        </table>
